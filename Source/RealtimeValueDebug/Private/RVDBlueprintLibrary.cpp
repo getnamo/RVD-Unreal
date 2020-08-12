@@ -20,6 +20,7 @@ FRVDebug::FRVDebug()
 FRVDebug::~FRVDebug()
 {
 	Data = nullptr;
+	Max = 10;
 }
 
 
