@@ -203,7 +203,7 @@ int32 FRVDebug::IntFromDebug(const FString& Category /*= TEXT("default")*/, int3
 	auto& Bucket = Data->IntData[Category];
 	
 	//convert index offset, check for loop back
-	int32 DesiredIndex = Bucket.LoopIndex + Index;
+	int32 DesiredIndex = Bucket.LoopIndex - 1 + Index;
 	if (DesiredIndex < 0)
 	{
 		if (Bucket.Values.Num() == 0)
@@ -228,7 +228,7 @@ float FRVDebug::FloatFromDebug(const FString& Category /*= TEXT("default")*/, in
 	auto& Bucket = Data->FloatData[Category];
 
 	//convert index offset, check for loop back
-	int32 DesiredIndex = Bucket.LoopIndex + Index;
+	int32 DesiredIndex = Bucket.LoopIndex - 1 + Index;
 	if (DesiredIndex < 0)
 	{
 		if (Bucket.Values.Num() == 0)
@@ -253,7 +253,7 @@ FString FRVDebug::StringFromDebug(const FString& Category /*= TEXT("default")*/,
 	auto& Bucket = Data->StringData[Category];
 
 	//convert index offset, check for loop back
-	int32 DesiredIndex = Bucket.LoopIndex + Index;
+	int32 DesiredIndex = Bucket.LoopIndex - 1 + Index;
 	if (DesiredIndex < 0)
 	{
 		if (Bucket.Values.Num() == 0)
@@ -278,7 +278,7 @@ FVector FRVDebug::VectorFromDebug(const FString& Category /*= TEXT("default")*/,
 	auto& Bucket = Data->VectorData[Category];
 
 	//convert index offset, check for loop back
-	int32 DesiredIndex = Bucket.LoopIndex + Index;
+	int32 DesiredIndex = Bucket.LoopIndex -1 + Index;
 	if (DesiredIndex < 0)
 	{
 		if (Bucket.Values.Num() == 0)
@@ -303,7 +303,7 @@ FRotator FRVDebug::RotatorFromDebug(const FString& Category /*= TEXT("default")*
 	auto& Bucket = Data->RotatorData[Category];
 
 	//convert index offset, check for loop back
-	int32 DesiredIndex = Bucket.LoopIndex + Index;
+	int32 DesiredIndex = Bucket.LoopIndex - 1 + Index;
 	if (DesiredIndex < 0)
 	{
 		if (Bucket.Values.Num() == 0)

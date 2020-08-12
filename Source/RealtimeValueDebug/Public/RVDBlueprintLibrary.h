@@ -243,41 +243,41 @@ public:
 	//Setting
 
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
-	static void DebugIntValue(int32 Value, const FString& Category = TEXT("default"), UObject* WorldContextObject = nullptr);
+	static void DebugIntValue(int32 Value, const FString& DebugCategory = TEXT("default"), UObject* WorldContextObject = nullptr);
 
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
-	static void DebugFloatValue(float Value, const FString& Category = TEXT("default"), UObject* WorldContextObject = nullptr);
+	static void DebugFloatValue(float Value, const FString& DebugCategory = TEXT("default"), UObject* WorldContextObject = nullptr);
 
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
-	static void DebugStringValue(FString Value, const FString& Category = TEXT("default"), UObject* WorldContextObject = nullptr);
+	static void DebugStringValue(FString Value, const FString& DebugCategory = TEXT("default"), UObject* WorldContextObject = nullptr);
 
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
-	static void DebugVectorValue(FVector Value, const FString& Category = TEXT("default"), UObject* WorldContextObject = nullptr);
+	static void DebugVectorValue(FVector Value, const FString& DebugCategory = TEXT("default"), UObject* WorldContextObject = nullptr);
 
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
-	static void DebugRotatorValue(FRotator Value, const FString& Category = TEXT("default"), UObject* WorldContextObject = nullptr);
+	static void DebugRotatorValue(FRotator Value, const FString& DebugCategory = TEXT("default"), UObject* WorldContextObject = nullptr);
 
 	//Getting
 
 	//Index is an offset 0 = latest, -1 is the one before that etc...
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
-	static int32 IntValueFromDebug(const FString& Category = TEXT("default"), int32 Index = 0, UObject* WorldContextObject = nullptr);
+	static int32 IntValueFromDebug(const FString& DebugCategory = TEXT("default"), int32 Index = 0, UObject* WorldContextObject = nullptr);
 
 	//Index is an offset 0 = latest, -1 is the one before that etc...
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
-	static float FloatValueFromDebug(const FString& Category = TEXT("default"), int32 Index = 0, UObject* WorldContextObject = nullptr);
+	static float FloatValueFromDebug(const FString& DebugCategory = TEXT("default"), int32 Index = 0, UObject* WorldContextObject = nullptr);
 
 	//Index is an offset 0 = latest, -1 is the one before that etc...
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
-	static FString StringValueFromDebug(const FString& Category = TEXT("default"), int32 Index = 0, UObject* WorldContextObject = nullptr);
+	static FString StringValueFromDebug(const FString& DebugCategory = TEXT("default"), int32 Index = 0, UObject* WorldContextObject = nullptr);
 
 	//Index is an offset 0 = latest, -1 is the one before that etc...
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
-	static FVector VectorValueFromDebug(const FString& Category = TEXT("default"), int32 Index = 0, UObject* WorldContextObject = nullptr);
+	static FVector VectorValueFromDebug(const FString& DebugCategory = TEXT("default"), int32 Index = 0, UObject* WorldContextObject = nullptr);
 
 	//Index is an offset 0 = latest, -1 is the one before that etc...
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
-	static FRotator RotatorValueFromDebug(const FString& Category = TEXT("default"), int32 Index = 0, UObject* WorldContextObject = nullptr);
+	static FRotator RotatorValueFromDebug(const FString& DebugCategory = TEXT("default"), int32 Index = 0, UObject* WorldContextObject = nullptr);
 
 
 

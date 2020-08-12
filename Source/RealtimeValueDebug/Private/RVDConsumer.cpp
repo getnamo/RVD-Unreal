@@ -13,6 +13,8 @@ URVDConsumer::URVDConsumer()
 	bListenToRotator = false;
 
 	ListenIndex = 0;
+
+	Category = TEXT("default");
 }
 
 void URVDConsumer::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
