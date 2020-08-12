@@ -257,6 +257,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static", meta = (WorldContext = "WorldContextObject"))
 	static void DebugRotatorValue(FRotator Value, const FString& DebugCategory = TEXT("default"), UObject* WorldContextObject = nullptr);
 
+	UFUNCTION(BlueprintCallable, Category = "Realtime Value Debug Static")
+	static void SetRVDMaxHistory(int32 NewMax);
+
 	//Getting
 
 	//Index is an offset 0 = latest, -1 is the one before that etc...

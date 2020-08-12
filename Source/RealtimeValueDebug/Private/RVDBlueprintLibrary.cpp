@@ -15,12 +15,12 @@ void FRVDTimeData::SetWithFrameTime(float InFrameTime)
 FRVDebug::FRVDebug()
 {
 	Data = MakeShareable(new FRVDebugData);
+	Max = 10;
 }
 
 FRVDebug::~FRVDebug()
 {
 	Data = nullptr;
-	Max = 10;
 }
 
 
@@ -382,6 +382,11 @@ void URVDBlueprintLibrary::DebugRotatorValue(FRotator Value, const FString& Cate
 	}
 
 	DebugHandler->SetRotatorValue(Value, Category, FrameTime);
+}
+
+void URVDBlueprintLibrary::SetRVDMaxHistory(int32 NewMax)
+{
+	DebugHandler->SetMax(NewMax);
 }
 
 int32 URVDBlueprintLibrary::IntValueFromDebug(const FString& Category /*= TEXT("default")*/, int32 Index /*= 0*/, UObject* WorldContextObject /*= nullptr*/)
