@@ -2,6 +2,7 @@
 
 
 #include "RVDBlueprintLibrary.h"
+#include "Engine/World.h"
 #include "UObject/Object.h"
 
 TSharedPtr<FRVDebug> URVDBlueprintLibrary::DebugHandler = nullptr;
