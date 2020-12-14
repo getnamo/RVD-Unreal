@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "0.1.0",
+	"VersionName": "0.2.0",
 	"FriendlyName": "RealtimeValueDebug",
 	"Description": "Real-time Value Debugging for Unreal Engine. Mainly used to visualize vectors, floats, rotations, and other values while running your project.",
 	"Category": "Utility",
